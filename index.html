@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Joe Burgoyne Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://kit.fontawesome.com/bc57d02b5e.js" crossorigin="anonymous"></script>
+
+		<!-- tooltip -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- Include publications list -->
+		
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+<!-- smooth scroll -->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="index.html">Joe Burgoyne Lab</a></h1>
+							<p>Senior Lecturer <br /> 
+							King's College London</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#intro">Introduction</a></li>
+								<li><a href="#main">Refences</a></li>
+								<li><a href="#highlights">Funding</a></li>
+								<li><a href="#footer">Contact</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Intro -->
+				<section id="intro" class="wrapper style1">
+					<div class="title">Introduction</div>
+					<div class="container">
+						<p class="style1">Research interests</p>
+						<p class="style3">Lab info</p>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">References</div>
+					<div class="container">
+						
+						<p class="style1">References</p>
+
+						<div w3-include-html="assets/publications/publications.html"></div> 
+
+						<script>
+						includeHTML();
+						</script>
+
+						<p class="style1">References</p>
+
+					</div>
+				</section>
+
+			<!-- Highlights -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">Funding</div>
+					<div class="container">
+						<p class="style1">Recent funding</p>
+						<p class="style3">Funding info</p>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title">Contact</div>
+					<div class="container">
+						<div class="row">
+							<!-- <div class="col-3 col-12-medium"> -->
+
+								<!-- Contact Form -->
+									<!-- <section>
+										<form method="post" action="#">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="text" name="name" id="contact-name" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="email" id="contact-email" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send" /></li>
+														<li><input type="reset" class="style2" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section> -->
+
+							</div>
+							<div class="col-6 col-10-medium">
+
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row gtr-50">
+											<!-- <div class="col-4 col-12-small"> -->
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Address</h3>
+													<p>
+														King College Lodnon<br />
+														St Thomas' Hospital<br />
+														Westminster Bridge Road<br />
+														London SE1 7EH<br />
+														United Kingdom
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="fas fa-link"> <span style="font-family:Arial; font-weight: 600;"> Link </span></h3>
+													<p>
+														<style> { text-decoration: none; } </style>
+														<div style="font-size: 30px;">
+														<a href="https://orcid.org/0000-0001-7325-7382" target="_blank" class="fas fa-university" style="text-decoration: none;" data-toggle="tooltip" title="King College London"><span class="label"></span></a> <span style="padding-left:15px">
+														<a href="https://orcid.org/0000-0001-7325-7382" target="_blank" class="fab fa-orcid" style="text-decoration: none;" data-toggle="tooltip" title="Orcid"><span class="label"></span></a> <span style="padding-left:15px">
+														<a href="#" target="_blank" class="fas fa-user-graduate" style="text-decoration: none;" data-toggle="tooltip" title="Google Scholar"><span class="label"></span></a> <span style="padding-left:15px">
+														<a href="#" target="_blank" class="fab fa-researchgate" style="text-decoration: none;" data-toggle="tooltip" title="Researchgate"><span class="label"></span></a> <span style="padding-left:15px">
+														<a href="#" target="_blank" class="fab fa-linkedin" style="text-decoration: none;" data-toggle="tooltip" title="LinkedIn"><span class="label"></span></a> <span style="padding-left:15px"> <br />
+														<script>
+														$(document).ready(function(){
+  					 									$('[data-toggle="tooltip"]').tooltip();   
+														});
+														</script>
+												 <!--	</p>
+												</section>
+											<!-- </div> -->
+											<!-- <div class="col-6 col-12-small"> 
+												<section>	-->																										<p>
+													<div style="font-size: 18px;">
+
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<!-- <p> -->
+														<a href="#">joseph.r.burgoyne@kcl.ac.uk </a>
+													</p>
+												</section>
+											</div>
+											<!--	<div class="col-4 col-12-small">
+												<section>
+													<h3 class="icon solid fa-phone">Phone</h3>
+													<p>
+														(000) 555-0000
+													</p>
+												</section>
+											</div>  -->
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div id="copyright">
+							<ul>
+								<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
